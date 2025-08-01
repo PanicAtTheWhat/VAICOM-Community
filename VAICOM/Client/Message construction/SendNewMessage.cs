@@ -22,15 +22,7 @@ namespace VAICOM
                         if (State.currentmessage.command.Equals(4000))
                         {
                             // for Select command
-                            int delay = 0;
-                            if (!State.currentmodule.radiodelay.Equals(null))
-                            {
-                                delay = State.currentmodule.radiodelay; // allow some time for radio to tune
-                            }
-                            else
-                            {
-                                delay = 0;
-                            }
+                            int delay = State.currentmodule?.radiodelay ?? 0; // allow some time for radio to tune
                             Thread.Sleep(delay);
                             DcsClient.SendUpdateRequest(); // get an update directly after
                         }
