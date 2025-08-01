@@ -13,7 +13,7 @@ namespace VAICOM
             public string Name;
             public string Alias;
             public string SpeechAlias;
-            public int radiodelay;
+            public int? radiodelay;
             public int chnoffset;
             public bool ProOnly;
             public bool IsFC;
