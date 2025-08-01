@@ -23,9 +23,9 @@ namespace VAICOM
                         {
                             // for Select command
                             int delay = 0;
-                            if (!State.currentmodule.radiodelay.Equals(null))
+                            if (State.currentmodule.radiodelay != null)
                             {
-                                delay = State.currentmodule.radiodelay; // allow some time for radio to tune
+                                delay = (int)State.currentmodule.radiodelay; // allow some time for radio to tune
                             }
                             else
                             {
